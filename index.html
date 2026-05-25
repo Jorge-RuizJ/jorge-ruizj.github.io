@@ -26,21 +26,40 @@
 
     <main>
         <!-- Hero Section: who you are, what you offer and why it matters-->
-         <!-- For this section i will include a little introduction of me, a picture of me on the left and 
-          description on right-->
         <section id="about">
-            <!-- Left Side -->
-            <div class="profile-image">
-                <img src="images/profile_test.jpg" alt="Jorge Ruiz">
+            <div class="container-about">
+                <div class="profile-image">
+                    <img src="images/profile_test.jpg" alt="Jorge Ruiz">
+                </div>
+                <div class="about-text">
+                    <h2>Hi, My name is Jorge Ruiz</h2>
+                    <p>I am a currently a Computer Science student at the University of Colorado Colorado Springs (UCCS)</p>
+                    <p>I plan to be a software engineer in the future</p>
+                </div>
             </div>
-
-            <!-- Right Side -->
-             <div class="about-text">
-                <h2>Hi, My name is Jorge Ruiz</h2>
-                <p>I am a programmer looking to expand my knowledge...</p>
-             </div>
         </section>
-        
+
+        <section id="about-section-one">
+            <div class="container-about">
+                <div class="about-section-one-image">
+                    <img src="images/about-me.jpg" alt="About Me">
+                </div>
+                <div class="about-section-one-text">
+                    <p>I will talk about my background here.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section-two">
+            <div class="container-about">
+                <div class="about-section-two-image">
+                    <img src="images/about-me-2.png" alt="About Me Two">
+                </div>
+                <div class="about-section-two-text">
+                    <p>Talk about what you are working on currently</p>
+                </div>
+            </div>
+        </section>
         <!-- Background Gradient Transition -->
          <div class="transition-gradient-black"></div>
 
@@ -53,10 +72,12 @@
          <section id="projects">
             <h2>My projects</h2>
             <div class="projects-container">
-
                 <!-- Left side of the container (image and description) -->
                  <div class="project-view">
-                    <div class="project-image" id="display-image"></div>
+                    <div class="project-image" id="display-image">
+                        <button class="arrow prev" onclick="changeImage(-1)">&#10094;</button>
+                        <button class="arrow next" onclick="changeImage(1)">&#10095</button>
+                    </div>
                     <div class="project-details">
                         <h3 id="display-title">Project Details</h3>
                         <hr>
