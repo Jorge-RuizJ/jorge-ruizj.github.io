@@ -1,0 +1,263 @@
+/* DEFAULT (desktop) */
+
+:root{
+    /* This will be the website's main color scheme*/
+    --primary-color: #272727;
+    --secondary-color: #90cf6b;
+
+    /* Padding Variables */
+    --main-padding: 20px;
+    --section-padding: 60px; /* Separating Sections */
+
+    /* FONTS */
+    --main-font: 'Helvetica', Arial, sans-serif;
+    --times-font: 'Times New Roman', serif;
+
+}
+
+html{
+    scroll-behavior: smooth
+}
+
+section{
+    min-height: 50vh;
+    padding: 50px var(--main-padding);
+    scroll-margin-top: 100px;
+}
+
+body{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+}
+
+/* Top Menu */
+.main-header {
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+    background-color:#272727;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    padding: 25px 80px;
+    box-shadow: 0 4px 10px rgva(0,0,0,0.3);
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.logo a:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+nav ul {
+    display:flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a{
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul a:hover{
+    color: white;
+}
+
+/* Contact me button */
+.contact-btn {
+    background-color: #000;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+/*-----------------*/
+/* About Me Section */
+#about {
+    background-color: white;
+    color: black;
+    padding: 100px 10%;
+    display:flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Transition to black */
+.transition-gradient-black {
+    height: 200px;
+    background: linear-gradient(to bottom, white, black);
+    margin-top:-1px;
+}
+
+/*-----------------*/
+/* Skills Section */
+#skills {
+    background-color: black;
+    color:white;
+    padding: 100px 10%;
+    text-align: center;
+}
+
+/* Transition to White */
+.transition-gradient-white {
+    height:200px;
+    background: linear-gradient(to bottom, black, white);
+    margin-top:-1px;
+}
+
+/*-----------------*/
+/* Project Section */
+#projects {
+    background-color:white;
+    color: white;
+}
+
+#projects h2,
+#projects h3,
+#projects p {
+    color: black;
+}
+
+#projects .project-item h4 {
+    color: black;
+}
+
+.projects-container {
+    display: flex;
+    gap: 20px;
+    height: 600px;
+    max-height: 700px;
+    margin-top: 20px;
+    overflow:hidden;
+}
+
+/* Left Side of Container */
+
+.project-view {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.project-image {
+    flex:3;
+    width: 100%;
+    border: 4x solid black;
+    background-color: grey;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.project-details {
+    flex: 1;
+    border: 4px solid black;
+    margin-top: 15px;
+    padding: 20px;
+    background: white;
+}
+
+/* Right Side of Container */
+.project-list-box {
+    flex: 1;
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.project-list-box h3 {
+    text-align: center;
+    border-bottom: 4px solid black;
+    margin: 0;
+    padding: 10px;
+}
+
+.project-list-scrollbox {
+    overflow-y: auto; /* scrollbar */
+    padding: 15px;
+    flex-grow: 1;
+}
+
+/* Item's List (project scrollbar) */
+.project-item {
+    border: 3px solid black;
+    padding: 20px;
+    margin-bottom:15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.project-item:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.02);
+
+}
+
+.project-list-scrollbox::-webkit-scrollbar {
+    width: 8px;
+}
+
+.project-list-scrollbox::-webkit-scrollbar-track {
+    background: #c4c3c3;
+}
+
+.project-list-scrollbox::-webkit-scrollbar-thumb {
+    background: #686868;
+    /*border-radius: 10px;*/
+}
+
+
+/* Contact Me section */
+
+#contact{
+    background-color: black;
+    color:white;
+    padding: 100px 10%;
+    display:flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Footer Section */
+.footer-info {
+    background-color:#272727;
+    color: white;
+}
+.footer-info p{
+    justify-content: right;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 600px){
+    :root{
+        /* Padding Overriden values */
+        --main-padding:15px;
+        --font-size-base: 16px;
+    }
+}
